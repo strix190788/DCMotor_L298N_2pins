@@ -41,7 +41,7 @@ class DCMotor_L298N_2pins {
 		  analogWrite(_PWMpin, power);
 		} else {
 		  digitalWrite(_dirPin, !_direction);
-		  analogWrite(_PWMpin, 255 - power);
+		  analogWrite(_PWMpin, 255 - abs(power));
 		}		
 	}
    
